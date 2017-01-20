@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>tab</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="tab" id="tab">
+		<div class="hd">
+			<ul>
+				<li><a href="###">综合</a></li>
+				<li><a href="###">公告</a></li>
+				<li><a href="###">活动</a></li>
+				<li><a href="###">赛事</a></li>
+				<li><a href="###">其他</a></li>
+			</ul>
+		</div>
+		<div class="bd">
+			<div class="tab-panel">
+				<p>综合综合综合综合综合综合综合综合综合综合综合综合综合综合综合综合</p>
+			</div>
+			<div class="tab-panel">
+				<p>公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</p>
+			</div>
+			<div class="tab-panel">
+				<p>活动活动活动活动活动活动活动活动活动活动活动活动活动活动活动活动</p>
+			</div>
+			<div class="tab-panel">
+				<p>赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事</p>
+			</div>
+			<div class="tab-panel">
+				<p>其他其他其他其他其他其他其他其他其他其他其他其他其他其他其他其他</p>
+			</div>
+
+		</div>
+	</div>
+<script src="js/js.tabs.js"></script>
+<script>
+
+
+/*简单调用
+new tabs("tab", "tab-panel"); 
+
+多个tab调用
+new tabs("tab01", "tab-panel"); 
+new tabs("tab02", "tab-panel"); 
+new tabs("tab03", "tab-panel");*/
+
+/* 设置参数调用 */
+var tabs01 = new tabs("tab", "tab-panel", {
+	timeout: 80,    //延迟切换时间。默认参数为60;
+	currCls:"on", //当前标签（li）class 名。默认参数为"on" (不会覆盖之前在HTML中已定义的class);
+	disCls:"dis", //控制显示class名。默认参数为"dis";
+	event: "mouseover",  //事件类型。默认为"mouseover";
+	onFinish: callback //回调函数。需要定义callback函数;
+});
+
+
+//回调函数接口 回调函数参数为：上一个索引值,当前索引值,当前显示块
+function callback(n,index,panel){
+
+console.log(n,index,panel);
+
+}
+
+</script>
+</body>
+</html>
